@@ -19,4 +19,23 @@
             default: return 0;
         }
     }
+
+    public static int convertirRomanoADecimal(string romano)
+    {
+        int total = 0;
+        int longitud = romano.Length;
+        for (int i = 0; i < longitud; i++)
+        {
+            int valorActual = obtenerValorDecimal(romano[i]);
+            int valorSiguiente = (i + 1 < longitud) ? obtenerValorDecimal(romano[i + 1]) : 0;
+            if (valorActual < valorSiguiente)
+            {
+                total -= valorActual;
+            } else
+            {
+                total += valorActual;
+            }
+        }
+        return total;
+    }
 }
