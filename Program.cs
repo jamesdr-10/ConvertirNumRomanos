@@ -2,7 +2,8 @@
 {
     public static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        string numRomano = "MCCXXXIV"; // 1234
+        Console.WriteLine($"El número romano {numRomano} en decimal es {convertirRomanoADecimal(numRomano)}");
     }
 
     public static int obtenerValorDecimal(char c)
